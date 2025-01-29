@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Pop!</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <img src="img/logo2.svg" alt="Partner Logo" />
+      <div class="logo"></div>
+      <a href="credits.html"
+        ><button class="credit-button">
+          <span> 🍿</span> <span>Crédits</span> <span>🍿 </span>
+        </button></a
+      >
+    </header>
+
+    <div class="container">
+      <!-- Colonne 1 -->
+      <div class="column">
+        <button
+          class="music-button"
+          onclick="toggleMusic(this, './song/Musique_Intro.mp3')"
+        >
+          <span class="music-icon">🔇</span>
+        </button>
+        <img src="/img/Decor_Culture_Clash.png" alt="Game 1" />
+        <div class="column-content">
+          <h3>Culture Klash</h3>
+          <p>Retrouve les 66 artistes cachés dans deux mondes parallèles!</p>
+          <p>
+            33 rappeurs français et 33 artistes de la pop américaine
+            t'attendent.
+          </p>
+          <a
+            href="https://culture-klash.popcorn-esd.com/"
+            target="_blank"
+            class="open-link-button"
+            >Jouer</a
+          >
+        </div>
+      </div>
+      <!-- Colonne 2 -->
+      <div class="column">
+        <button
+          class="music-button"
+          onclick="toggleMusic(this, './song/Intro_Pixel_Parallax.mp3')"
+        >
+          <span class="music-icon">🔇</span>
+        </button>
+        <img src="img/grp2.png" alt="Game 2" />
+        <div class="column-content">
+          <h3>Pixel Parallax</h3>
+          <p>Retrouve les 66 jeux vidéos qui vont te rendre nostalgique</p>
+          <a
+            href="https://example.com/game2"
+            target="_blank"
+            class="open-link-button"
+            >Jouer</a
+          >
+        </div>
+      </div>
+      <!-- Colonne 3 -->
+      <div class="column">
+        <button
+          class="music-button"
+          onclick="toggleMusic(this, './song/intro_echoverse.mp3')"
+        >
+          <span class="music-icon">🔇</span>
+        </button>
+        <img src="img/IMAGE_FINALE.jpg" alt="Game 3" />
+        <div class="column-content">
+          <h3>Echoverse</h3>
+          <p>
+            Explore les mondes parallèles et retrouve les 64 artistes cachés!
+          </p>
+          <a
+            href="https://example.com/game3"
+            target="_blank"
+            class="open-link-button"
+            >Jouer</a
+          >
+        </div>
+      </div>
+      <!-- Colonne 4 -->
+      <div class="column">
+        <button
+          class="music-button"
+          onclick="toggleMusic(this, './song/paradox_motel.mp3')"
+        >
+          <span class="music-icon">🔇</span>
+        </button>
+        <img src="img/popcorn-gaming-paradoxmotel.jpg" alt="Game 4" />
+        <div class="column-content">
+          <h3>Paradox Motel</h3>
+          <p>42 references de films a retrouver</p>
+          <a
+            href="https://paradox-motel.popcorn-esd.com/"
+            target="_blank"
+            class="open-link-button"
+            >Jouer</a
+          >
+        </div>
+      </div>
+      <!-- Colonne 5 -->
+      <div class="column">
+        <button
+          class="music-button"
+          onclick="toggleMusic(this, './song/intro_dbl.mp3')"
+        >
+          <span class="music-icon">🔇</span>
+        </button>
+        <img src="img/dbl.png" alt="Game 5" />
+        <div class="column-content">
+          <h3>Divided By Light</h3>
+          <p>62 gentils et méchants de la culture pop à retrouver</p>
+          <a
+            href="https://divided-by-light.popcorn-esd.com/"
+            target="_blank"
+            class="open-link-button"
+            >Jouer</a
+          >
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

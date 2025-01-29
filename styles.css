@@ -1,0 +1,306 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #021321;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #021321;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 72px 0.5rem 72px;
+  width: 100%;
+  height: 20vh;
+  /* Assurez-vous que le header prend toute la largeur disponible */
+}
+
+/* Logos */
+header img {
+  width: 180px;
+  height: 140x;
+  padding: 8px;
+}
+.logo {
+  width: 180px;
+  height: 110px;
+  background-image: url("img/Logo_Verse\ 1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+span {
+  font-size: 16px;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.credit-button {
+  background-color: #021321;
+  color: #ffffff;
+  padding: 16px 24px;
+  border: 1px solid #35424d;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.credit-button:hover {
+  background-color: #35424d;
+  color: #ffffff;
+}
+/* Titre */
+header h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  /* Cela positionne le titre relativement au header */
+  left: 50%;
+  /* Positionne le début du titre au centre du header */
+  transform: translateX(-50%);
+  /* Décale le titre de la moitié de sa largeur pour le centrer */
+}
+
+/* Footer */
+footer {
+  background-color: #ff4500;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Accordéon Container */
+.container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex 0.5s ease;
+  background-color: #2a2a2a;
+  /* Couleur de fond pour les colonnes */
+}
+
+.column:hover {
+  flex: 5;
+}
+
+/* Overlay */
+.column::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #021321;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Activer l'overlay sur les colonnes non survolées */
+.container:hover .column::before {
+  opacity: 1.8;
+  visibility: visible;
+}
+
+/* Désactiver l'overlay sur la colonne survolée */
+.container:hover .column:hover::before {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.column img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Dégradé */
+.column::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  /* Ajuste le placement du dégradé */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* Textes et Boutons */
+.column-content {
+  position: absolute;
+  top: 60%;
+  /* Ajuste le placement du dégradé */
+  width: 100%;
+  height: 60%;
+  padding-left: 80px;
+  padding-right: 80px;
+  transform: translateX(0);
+  text-align: left;
+  color: white;
+  z-index: 2;
+  opacity: 0;
+  /* Le texte est caché par défaut */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.column:hover .column-content {
+  opacity: 0.8;
+  /* Le texte devient visible lors du survol */
+  transform: translateX(0);
+  content: "";
+  position: absolute;
+  top: 60%;
+  /* Ajuste le placement du dégradé */
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.column-content h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.column-content p {
+  font-size: 16px;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500px;
+}
+
+.open-link-button {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #e70ba2;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  transition: background-color 0.3s ease;
+}
+
+.open-link-button:hover {
+  background-color: #9f1f77;
+  color: #ffffff;
+}
+
+/* Bouton Musique */
+.music-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  /* Cacher le bouton par défaut */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+}
+
+/* Afficher le bouton au survol de la colonne */
+.column:hover .music-button {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Reste des styles du bouton musique */
+.music-button:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transform: scale(1.1) !important;
+}
+
+.music-icon {
+  font-size: 20px;
+}
+
+.music-button.playing .music-icon {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
