@@ -45,3 +45,25 @@ window.onbeforeunload = function () {
     currentAudio.pause();
   }
 };
+
+// Ajouter ces fonctions pour gérer l'offcanvas
+function openOffcanvas() {
+  document.getElementById("creditsOffcanvas").classList.add("active");
+}
+
+function closeOffcanvas() {
+  document.getElementById("creditsOffcanvas").classList.remove("active");
+}
+
+// Fermer l'offcanvas en cliquant en dehors
+document.addEventListener("click", function (event) {
+  const offcanvas = document.getElementById("creditsOffcanvas");
+  const creditButton = document.querySelector(".credit-button");
+
+  if (
+    !offcanvas.contains(event.target) &&
+    !creditButton.contains(event.target)
+  ) {
+    offcanvas.classList.remove("active");
+  }
+});

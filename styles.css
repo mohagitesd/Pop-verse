@@ -58,6 +58,7 @@ span {
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 .credit-button:hover {
   background-color: #35424d;
@@ -303,4 +304,96 @@ footer a:hover {
   100% {
     transform: scale(1);
   }
+}
+
+.offcanvas {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: #021321;
+  z-index: 1000;
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.offcanvas.active {
+  right: 0;
+}
+
+.credits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.credit-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.credit-logo {
+  height: 80px;
+  object-fit: contain;
+}
+
+.team-members {
+  text-align: center;
+  color: white;
+}
+
+.team-members p {
+  margin: 0.5rem 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+}
+
+.credits-footer {
+  text-align: center;
+  color: #00e6e6;
+  padding: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.credits-footer p:first-child {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.credits-footer p:last-child {
+  font-weight: bold;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
 }

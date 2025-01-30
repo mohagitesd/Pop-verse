@@ -15,11 +15,9 @@
     <header>
       <img src="img/logo2.svg" alt="Partner Logo" />
       <div class="logo"></div>
-      <a href="credits.html"
-        ><button class="credit-button">
-          <span> 🍿</span> <span>Crédits</span> <span>🍿 </span>
-        </button></a
-      >
+      <button class="credit-button" onclick="openOffcanvas()">
+        🍿 CREDITS 🍿
+      </button>
     </header>
 
     <div class="container">
@@ -60,7 +58,7 @@
           <h3>Pixel Parallax</h3>
           <p>Retrouve les 66 jeux vidéos qui vont te rendre nostalgique</p>
           <a
-            href="https://example.com/game2"
+            href="https://pixel-parallax.popcorn-esd.com/"
             target="_blank"
             class="open-link-button"
             >Jouer</a
@@ -82,7 +80,7 @@
             Explore les mondes parallèles et retrouve les 64 artistes cachés!
           </p>
           <a
-            href="https://example.com/game3"
+            href="https://echoverse.popcorn-esd.com/"
             target="_blank"
             class="open-link-button"
             >Jouer</a
@@ -130,6 +128,116 @@
         </div>
       </div>
     </div>
+
+    <div class="offcanvas" id="creditsOffcanvas">
+      <button class="close-button" onclick="closeOffcanvas()">×</button>
+      <div class="offcanvas-content">
+        <div class="credits-grid">
+          <!-- Culture Klash -->
+          <div class="credit-card">
+            <img
+              src="./img/logo_culture_klash.png"
+              alt="Culture Klash"
+              class="credit-logo"
+            />
+            <div class="team-members">
+              <p>Amélie SINSEAU</p>
+              <p>Nabil SKAOUI</p>
+              <p>Matthieu BERTINETTI</p>
+              <p>Sarah MAZEAS</p>
+              <p>Kyliane TAYAMA</p>
+              <p>Viktorya INTINA</p>
+            </div>
+          </div>
+
+          <!-- Divided Light -->
+          <div class="credit-card">
+            <img
+              src="./img/logo_dbl.png"
+              alt="Divided Light"
+              class="credit-logo"
+            />
+            <div class="team-members">
+              <p>Adama FALL</p>
+              <p>Marion GÉRARD</p>
+              <p>Nicolas BRIOT</p>
+              <p>Mélissa CHEMLOUL</p>
+              <p>Ethan BEN GHOUZI</p>
+            </div>
+          </div>
+
+          <!-- Echo Verse -->
+          <div class="credit-card">
+            <img
+              src="./img/logo_echoverse.png"
+              alt="Echo Verse"
+              class="credit-logo"
+            />
+            <div class="team-members">
+              <p>Raphael HABBAT</p>
+              <p>Thibault LEGRAND</p>
+              <p>Anissa MANDI</p>
+              <p>Inès GESLIN</p>
+              <p>Ivana VANKOVIC</p>
+            </div>
+          </div>
+
+          <!-- Paradox Motel -->
+          <div class="credit-card">
+            <img
+              src="./img/logo_pardox_motel.png"
+              alt="Paradox Motel"
+              class="credit-logo"
+            />
+            <div class="team-members">
+              <p>Ines BOULANOUJAR</p>
+              <p>Léa BUYLE</p>
+              <p>Keren NGABURU BIENZA</p>
+              <p>William MILIC</p>
+              <p>Yanwen WU</p>
+            </div>
+          </div>
+
+          <!-- Pixel Parallax -->
+          <div class="credit-card">
+            <img
+              src="./img/logo_pixel_paralax.png"
+              alt="Pixel Parallax"
+              class="credit-logo"
+            />
+            <div class="team-members">
+              <p>Anais VILAINE</p>
+              <p>Jeremy MESANGE</p>
+              <p>Théo MOREAU GENDRE</p>
+              <p>Mickael LIN</p>
+            </div>
+          </div>
+
+          <!-- Versus Game -->
+          <div class="credit-card">
+            <img
+              src="./img/logo_versus_game.png"
+              alt="Versus Game"
+              class="credit-logo"
+            />
+            <div class="team-members">
+              <p>Hédi BOULORD</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="credits-footer">
+          <p>SITE IMAGINÉ ET DÉVELOPPÉ PAR :</p>
+          <br />
+          <p>Mohamadou SY</p>
+          <br />
+          <p>et</p>
+          <br />
+          <p>Aurelien Derouet</p>
+        </div>
+      </div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
